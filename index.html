@@ -572,7 +572,7 @@ html[data-lang="ja"] .tabs button span{word-break:normal}
   document.querySelectorAll('img[data-ref]').forEach(i=>{i.src=src(i.dataset.ref);});
 
   // Tabs
-  const tabs=[...document.querySelectorAll('[role=tab]')];
+  const tabs=[...document.querySelectorAll('.tabs [role=tab]')];
   function select(t, focus){
     tabs.forEach(x=>{const on=x===t; x.setAttribute('aria-selected',on); x.tabIndex=on?0:-1;
       document.getElementById(x.getAttribute('aria-controls')).hidden=!on;});
